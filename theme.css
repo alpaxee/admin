@@ -81,3 +81,55 @@ html,body{background:var(--bg);color:var(--text)}
 .team-grid .member:nth-child(3) .member-photo{object-position:35% 32%}
 
 .team-grid .member:nth-child(-n+2) .member-photo{object-position:center 26%}
+
+/* Responsive proportions aligned with the reference site. */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+.site-header{top:8px;left:8px;right:8px;width:auto;height:64px;padding-left:max(24px,calc((100vw - 1100px)/2));padding-right:max(24px,calc((100vw - 1100px)/2));border:0;border-radius:30px 30px 0 0;background:#071519d9}
+.hero{box-sizing:border-box;min-height:max(720px,calc(100svh - 16px));margin:8px;border-radius:40px;padding:128px 24px 112px;background:radial-gradient(58% 51% at 50% 42%,#23888fba 0%,#19525d8c 44%,transparent 72%),radial-gradient(44% 36% at 19% 78%,#4e8a715d 0%,transparent 74%),radial-gradient(40% 35% at 83% 20%,#276f806b 0%,transparent 74%),linear-gradient(180deg,#061318 0%,#09202a 51%,#061317 100%)}
+.hero-center{width:min(100%,880px)}
+.hero h1{max-width:850px;margin:42px auto 30px;font-size:clamp(42px,4vw,58px);line-height:1.04;letter-spacing:-.025em}
+.hero p{max-width:610px;font-size:17px;line-height:1.55}
+.hero-points{gap:30px;margin-top:34px}.hero-points span{font-size:13px}
+.direct-card{left:max(38px,calc(50% - 690px));top:20%;width:224px}.planner-card{right:max(38px,calc(50% - 690px));top:auto;bottom:18%;width:208px}
+.about-statement p{max-width:980px}
+
+@media(max-width:1199px){
+  .floating-card{display:none}
+  .hero h1{font-size:clamp(42px,5.2vw,58px)}
+}
+@media(max-width:900px){
+  .site-header{padding-left:22px;padding-right:22px}
+  .hero{min-height:max(680px,calc(100svh - 12px));margin:6px;border-radius:30px;padding:120px 24px 92px}
+  .vacancy-grid{grid-template-columns:1fr}.vacancy-card{min-height:0}
+  .about-statement p{font-size:clamp(27px,5vw,42px)}
+}
+@media(max-width:620px){
+  html{scroll-padding-top:76px}
+  .site-header{top:5px;left:5px;right:5px;height:62px;padding:0 15px;border-radius:23px 23px 0 0}
+  .logo{font-size:17px}.logo-mark{width:34px;height:34px}.site-header nav{top:62px;border-radius:0 0 22px 22px}
+  .hero{min-height:max(660px,calc(100svh - 10px));margin:5px;border-radius:27px;padding:108px 18px 74px;align-items:center}
+  .hero-center{max-width:100%}.eyebrow{font-size:12px}
+  .hero h1{max-width:350px;margin:30px auto 24px;font-size:clamp(35px,10vw,43px);line-height:1.04;letter-spacing:-.035em}
+  .hero p{max-width:345px;font-size:15px;line-height:1.55}
+  .hero-points{max-width:310px;margin:30px auto 0;flex-direction:column;gap:13px}.hero-points span{font-size:12px}
+  .section{padding:82px 18px}.center-heading{margin-bottom:38px}.center-heading p{font-size:14px}
+  .section h2,.final-cta h2{font-size:clamp(31px,9vw,40px)}
+  .about-statement{gap:14px}.about-statement p{font-size:clamp(25px,7.2vw,33px);line-height:1.25}
+  .about-facts{grid-template-columns:1fr;gap:10px}.about-side .about-facts div{min-height:96px;padding:18px}
+  .vacancy-card{padding:25px;border-radius:20px}.status{position:static;align-self:flex-start;margin-top:16px}.vacancy-card h3{margin-top:26px}
+  .task-grid,.benefit-grid{gap:14px}.task-demo{height:225px}
+  .team-heading h2{font-size:36px}.team-heading>p{font-size:14px}
+  .team-stage{height:430px;--step:calc(86vw + 12px)}.team-grid .member{width:86vw;max-width:345px;height:400px}
+  .member-info{padding:20px 20px 23px}.member-info h3{font-size:20px}.member-info strong{font-size:12px}.member-info p{font-size:12px}
+  .faq-list details{padding:0 18px}.faq summary{font-size:15px;gap:15px}
+  .final-cta{padding:82px 20px 110px}
+  footer{grid-template-columns:1fr;gap:20px}footer>div:first-child{grid-column:auto}
+}
+@media(max-width:380px){
+  .hero h1{font-size:34px}.hero p{font-size:14px}.hero-points span{font-size:11px}
+  .site-header .logo span:last-child{font-size:15px}
+}
+@media(min-width:1600px){
+  .hero{min-height:calc(100svh - 16px)}
+  .hero h1{font-size:62px}.hero p{font-size:18px}
+}
