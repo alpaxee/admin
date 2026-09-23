@@ -192,3 +192,30 @@ footer{position:relative;z-index:2;min-height:510px;align-content:start;backgrou
   .footer-bottom span{display:block}.footer-bottom span:last-child{margin-top:7px;text-align:left}
 }
 @media(prefers-reduced-motion:reduce){.final-horizon,.final-horizon-glow{animation:none}}
+
+/* Accessibility and interaction polish. */
+html{color-scheme:dark;overflow-x:hidden}
+body{overflow-x:hidden;-webkit-tap-highlight-color:#8debd933}
+button,a,summary{touch-action:manipulation}
+.skip-link{position:fixed;z-index:100;top:12px;left:12px;padding:11px 16px;border-radius:10px;background:#e9faf2;color:#09231f;font-weight:700;transform:translateY(-160%);transition:transform 180ms cubic-bezier(.23,1,.32,1)}
+.skip-link:focus-visible{transform:translateY(0)}
+:where(a,button,summary,[tabindex]):focus-visible{outline:2px solid #9cf3df;outline-offset:4px}
+main:focus{outline:none}
+section[id]{scroll-margin-top:86px}
+:is(h1,h2,h3){text-wrap:balance}
+:is(p,li){text-wrap:pretty}
+button{transition-property:transform,background-color,border-color,color,box-shadow,opacity;transition-duration:160ms;transition-timing-function:cubic-bezier(.23,1,.32,1)}
+button:active{transform:scale(.97)}
+.team-arrow:active{transform:scale(.95)}
+.member-photo{background:#102327}
+.modal{overscroll-behavior:contain}
+.modal-dialog{max-height:min(88vh,560px);overflow:auto}
+@media(hover:hover) and (pointer:fine){
+  .site-header nav a:hover{color:#fff}
+  footer a:hover{color:#fff}
+}
+@media(prefers-reduced-motion:reduce){
+  .skip-link{transition:none}
+  .hero-center,.direct-card,.planner-card,.hero-glow,.horizon,.horizon-glow,.final-horizon,.final-horizon-glow{animation:none!important}
+  .section-enter,.reveal{opacity:1!important;transform:none!important;filter:none!important}
+}
